@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'com.gradle.plugin-publish' version '2.0.0'
+    id("org.gradle.plugin-compatibility") version "1.0.0"
+    id("xyz.jpenilla.run-paper") version "3.0.2"
+}
+
+group = 'io.github.monsieurdoceo.exceptiona'
+version = '0.0.1'
+
+gradlePlugin {
+    website = 'https://github.com/monsieurdoceo/Exceptiona'
+    vcsUrl = 'https://github.com/monsieurdoceo/Exceptiona.git'
+
+    plugins {
+        register('Exceptiona') {
+            id = 'io.github.monsieurdoceo.exceptiona'
+            displayName = 'Exceptiona'
+            description = 'An Api to create a custom exceptions and logging system.'
+            tags.set(['exceptions', 'api', 'server', 'java', 'minecraft', 'logging'])
+            implementationClass = 'io.github.monsieurdoceo.exceptiona.ExceptionaPlugin'
+            compatibility {
+                features {
+                    configurationCache = true
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+runServer {
+    minecraftVersion("1.21.10")
+}

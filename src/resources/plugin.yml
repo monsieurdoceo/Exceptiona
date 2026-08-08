@@ -1,0 +1,5 @@
+name: Exceptiona
+version: 0.0.1
+main: io.github.monsieurdoceo.exceptiona.ExceptionaPlugin
+api-version: 1.21.10
+authors: [MonsieurDoceo, TheSayko]
