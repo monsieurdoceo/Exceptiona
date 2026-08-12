@@ -3,7 +3,7 @@
 <https://polyformproject.org/licenses/perimeter/1.0.1>
 
 Required Notice: Copyright 2026 MonsieurDoceo and TheSakyo
-(https://github.com/monsieurdoceo/Filizer)
+(https://github.com/monsieurdoceo/Exceptiona)
 
 ## Acceptance
 
